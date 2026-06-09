@@ -1,0 +1,345 @@
+[
+  {
+    "id": "variables",
+    "order": 1,
+    "title": "Variables",
+    "description": "Give a value a name so you can use it again.",
+    "duration": "2 min",
+    "xp": 40,
+    "icon": "Box",
+    "color": "purple",
+    "concept": {
+      "eyebrow": "Labeled boxes",
+      "title": "Variables help JavaScript remember",
+      "body": "A variable is like a labeled box. JavaScript gives us three ways to create variables: let, const, and var.",
+      "simple": "Use let when values can change. Use const when values should stay the same. You may still see var in older JavaScript code.",
+      "code": "let score = 10;\nconst pi = 3.14;\nvar age = 18;\n\nconsole.log(score);\nconsole.log(pi);\nconsole.log(age);",
+      "tip": "Use const by default. Use let when the value needs to change. You'll mostly see var in older code.",
+      "visual": [
+  { "label": "let", "value": "can change" },
+  { "label": "const", "value": "cannot change" },
+  { "label": "var", "value": "older style" }
+]
+    },
+    "mistake": {
+      "title": "JavaScript cares about capital letters",
+      "wrong": "let score = 10;\nconsole.log(Score);",
+      "why": "score and Score look similar, but JavaScript sees two different names.",
+      "correct": "let score = 10;\nconsole.log(score);"
+    },
+    "challenge": {
+      "prompt": "Put 5 inside the lives variable.",
+      "starter": "let lives = ___;",
+      "answer": "5",
+      "hint": "Type the number 5. Numbers do not need quotes."
+    },
+    "quiz": {
+      "question": "Which keyword is best for a value that should never change?",
+"options": [
+  "let",
+  "const",
+  "var"
+],
+"answer": 1
+    }
+  },
+  {
+    "id": "data-types",
+    "order": 2,
+    "title": "Primitive DataTypes",
+    "description": "Tell words, numbers, and true-or-false values apart and more.",
+    "duration": "2 min",
+    "xp": 45,
+    "icon": "Shapes",
+    "color": "blue",
+    "concept": {
+      "eyebrow": "Kinds of values",
+      "title": "Values come in different types",
+      "body": "Primitive types are the basic building blocks of JavaScript. The most common ones are String, Number, and Boolean.",
+      "simple": "Strings store text. Numbers store numbers. Booleans store true or false.",
+      "code": "let name = \"Rohit\";\nlet age = 12;\nlet ready = true;\n\nconsole.log(name);\nconsole.log(age);\nconsole.log(ready);\n\n// Output:\n// Rohit\n// 12\n// true",
+      "tip": "Strings wear quotes. Numbers and booleans do not.",
+      "visual": [
+        { "label": "string", "value": "\"Rohit\"" },
+        { "label": "number", "value": "12" },
+        { "label": "boolean", "value": "true" }
+      ]
+    },
+    "mistake": {
+      "title": "Words need quotation marks",
+      "wrong": "let snack = pizza;",
+      "why": "Without quotes, JavaScript thinks pizza is a variable name.",
+      "correct": "let snack = \"pizza\";"
+    },
+    "challenge": {
+      "prompt": "Turn hello into a string.",
+      "starter": "let greeting = ___;",
+      "answer": "\"hello\"",
+      "hint": "Put hello between double quotation marks."
+    },
+    "quiz": {
+      "question": "Which value is a boolean?",
+      "options": ["\"true\"", "12", "true"],
+      "answer": 2
+    }
+  },
+
+  {
+  "id": "advanced-primitives",
+  "order": 3,
+  "title": "More Primitive Types",
+  "description": "Meet undefined, null, BigInt and Symbol.",
+  "duration": "3 min",
+  "xp": 50,
+  "icon": "Shapes",
+  "color": "blue",
+
+  "concept": {
+    "eyebrow": "Special values",
+    "title": "Not every value is text or a number",
+    "body": "JavaScript also has undefined, null, BigInt and Symbol.",
+    "simple": "Some values represent emptiness, huge numbers, or unique identifiers.",
+
+    "code": "let score;\nlet player = null;\nlet huge = 9007199254740991n;\nlet id = Symbol(\"player\");\n\nconsole.log(score);\nconsole.log(player);\nconsole.log(huge);\nconsole.log(id);\n\n// Output:\n// undefined\n// null\n// 9007199254740991n\n// Symbol(player)",
+
+    "tip": "Don't worry about memorizing Symbol yet. Just recognize it exists.",
+
+    "visual": [
+      { "label": "undefined", "value": "empty" },
+      { "label": "null", "value": "nothing" },
+      { "label": "bigint", "value": "huge number" }
+    ]
+  },
+
+  "mistake": {
+    "title": "Undefined and null are different",
+    "wrong": "let player = undefined;",
+    "why": "undefined means no value has been assigned yet. null means intentionally empty.",
+    "correct": "let player = null;"
+  },
+
+  "challenge": {
+    "prompt": "Which value means intentionally nothing?",
+    "starter": "___",
+    "answer": "null",
+    "hint": "It starts with n."
+  },
+
+  "quiz": {
+    "question": "Which primitive type stores very large numbers?",
+    "options": ["Boolean", "BigInt", "String"],
+    "answer": 1
+  }
+},
+ 
+{
+  "id": "non-primitive-types",
+  "order": 4,
+  "title": "Non Primitive Types",
+  "description": "Arrays, Objects and Functions.",
+  "duration": "3 min",
+  "xp": 55,
+  "icon": "Blocks",
+  "color": "green",
+
+  "concept": {
+    "eyebrow": "Collections",
+    "title": "Some values can hold many things",
+    "body": "Arrays, objects and functions help us organize more complex information.",
+
+    "simple": "Arrays hold lists. Objects hold information. Functions hold actions.",
+
+    "code": "let fruits = [\"apple\", \"banana\"];\n\nlet player = {\n name: \"Mia\",\n score: 10\n};\n\nfunction cheer() {\n console.log(\"Go!\");\n}\n\nconsole.log(fruits);\nconsole.log(player);\ncheer();\n\n// Output:\n// [\"apple\", \"banana\"]\n// { name: \"Mia\", score: 10 }\n// Go!",
+
+    "tip": "Most real-world JavaScript programs use arrays and objects every day.",
+
+    "visual": [
+      { "label": "array", "value": "[ ]" },
+      { "label": "object", "value": "{ }" },
+      { "label": "function", "value": "( )" }
+    ]
+  },
+
+  "mistake": {
+    "title": "Arrays use square brackets",
+    "wrong": "let fruits = \"apple\", \"banana\";",
+    "why": "Arrays need square brackets.",
+    "correct": "let fruits = [\"apple\", \"banana\"];"
+  },
+
+  "challenge": {
+    "prompt": "How many items are inside this array?",
+    "starter": "[\"apple\", \"banana\"]",
+    "answer": "2",
+    "hint": "Count the fruits."
+  },
+
+  "quiz": {
+    "question": "Which datatype stores a list of values?",
+    "options": ["Array", "Boolean", "String"],
+    "answer": 0
+  }
+},
+
+  {
+  "id": "operators",
+  "order": 5,
+  "title": "Operators",
+  "description": "Use symbols to calculate, compare and make decisions.",
+  "duration": "3 min",
+  "xp": 60,
+  "icon": "Calculator",
+  "color": "pink",
+  "concept": {
+    "eyebrow": "Action symbols",
+    "title": "Operators help JavaScript do work",
+    "body": "Operators are special symbols that perform actions. Some do math, some compare values, some combine conditions and some make decisions.",
+    "simple": "Arithmetic operators do math. Comparison operators ask questions. Logical operators combine conditions. Ternary operators make quick decisions.",
+    "code": "let total = 10 + 5;\nlet same = 5 === 5;\nlet canPlay = true && true;\nlet result = canPlay ? 'Start Game' : 'Locked';\n\nconsole.log(total);\nconsole.log(same);\nconsole.log(canPlay);\nconsole.log(result);\n\n// Output:\n// 15\n// true\n// true\n// Start Game",
+    "tip": "Use === instead of == whenever possible because it checks both value and datatype.",
+    "visual": [
+      { "label": "10 + 5", "value": "15" },
+      { "label": "5 === 5", "value": "true" },
+      { "label": "true && true", "value": "true" },
+      { "label": "? :", "value": "decision" }
+    ]
+  },
+  "mistake": {
+    "title": "== and === are different",
+    "wrong": "console.log(5 == '5');",
+    "why": "== converts datatypes automatically. === checks both value and datatype.",
+    "correct": "console.log(5 === 5);"
+  },
+  "challenge": {
+    "prompt": "Choose the operator that adds 4 and 2.",
+    "starter": "let total = 4 ___ 2;",
+    "answer": "+",
+    "hint": "Use the plus operator."
+  },
+  "quiz": {
+    "question": "Which operator checks both value and datatype?",
+    "options": ["==", "===", "="],
+    "answer": 1
+  }
+},
+  {
+    "id": "conditions",
+    "order": 6,
+    "title": "Conditions",
+    "description": "Let your code choose what to do next.",
+    "duration": "2 min",
+    "xp": 55,
+    "icon": "GitFork",
+    "color": "green",
+    "concept": {
+      "eyebrow": "Yes or no",
+      "title": "Conditions help code decide",
+      "body": "An if statement asks a true-or-false question. When the answer is true, its code runs.",
+      "simple": "It is like asking: Is it raining? If yes, take an umbrella.",
+      "code": "let score = 8;\nif (score > 5) {\n  console.log(\"Level up!\");\n}",
+      "tip": "The code inside the curly braces runs only when the question is true.",
+      "visual": [
+        { "label": "ask", "value": "score > 5" },
+        { "label": "answer", "value": "true" },
+        { "label": "then", "value": "Level up!" }
+      ]
+    },
+    "mistake": {
+      "title": "Use the exact same capital letters",
+      "wrong": "let ready = true;\nif (Ready) {\n  console.log(\"Go!\");\n}",
+      "why": "Ready is not the same name as ready.",
+      "correct": "let ready = true;\nif (ready) {\n  console.log(\"Go!\");\n}"
+    },
+    "challenge": {
+      "prompt": "Make the condition check if lives is above 0.",
+      "starter": "if (lives ___ 0) {\n  console.log(\"Keep going!\");\n}",
+      "answer": ">",
+      "hint": "Use the greater-than symbol."
+    },
+    "quiz": {
+      "question": "When does code inside an if statement run?",
+      "options": ["When its question is true", "Every time", "Never"],
+      "answer": 0
+    }
+  },
+  {
+    "id": "loops",
+    "order": 7,
+    "title": "Loops",
+    "description": "Repeat an action without writing it again and again.",
+    "duration": "3 min",
+    "xp": 60,
+    "icon": "Repeat2",
+    "color": "orange",
+    "concept": {
+      "eyebrow": "Repeat with ease",
+      "title": "Loops repeat code for you",
+      "body": "A loop runs the same code more than once. This loop counts from 1 to 3.",
+      "simple": "A loop is like saying, Clap three times, instead of writing clap three separate times.",
+      "code": "for (let count = 1; count <= 3; count++) {\n  console.log(count);\n}",
+      "tip": "count++ adds one after each turn.",
+      "visual": [
+        { "label": "turn 1", "value": "1" },
+        { "label": "turn 2", "value": "2" },
+        { "label": "turn 3", "value": "3" }
+      ]
+    },
+    "mistake": {
+      "title": "A missing semicolon can be confusing",
+      "wrong": "let count = 1\nconsole.log(count)",
+      "why": "JavaScript often guesses correctly, but semicolons clearly show where instructions end.",
+      "correct": "let count = 1;\nconsole.log(count);"
+    },
+    "challenge": {
+      "prompt": "Make the loop stop at 3.",
+      "starter": "for (let i = 1; i <= ___; i++) {\n  console.log(i);\n}",
+      "answer": "3",
+      "hint": "Type the final number you want to print."
+    },
+    "quiz": {
+      "question": "Why do programmers use loops?",
+      "options": ["To repeat code", "To make text bold", "To delete JavaScript"],
+      "answer": 0
+    }
+  },
+  {
+    "id": "functions",
+    "order": 8,
+    "title": "Functions",
+    "description": "Save a set of instructions and use it anytime.",
+    "duration": "3 min",
+    "xp": 70,
+    "icon": "Blocks",
+    "color": "yellow",
+    "concept": {
+      "eyebrow": "Reusable actions",
+      "title": "Functions are mini recipes",
+      "body": "A function groups instructions under one name. Use that name with () to run the instructions.",
+      "simple": "A function is a button you build. Give it a name, then press it by writing its name with ().",
+      "code": "function cheer() {\n  console.log(\"You can do it!\");\n}\n\ncheer();",
+      "tip": "First make the function. Then call it.",
+      "visual": [
+        { "label": "make", "value": "cheer" },
+        { "label": "call", "value": "cheer()" },
+        { "label": "result", "value": "You can do it!" }
+      ]
+    },
+    "mistake": {
+      "title": "Do not forget the parentheses",
+      "wrong": "function cheer() {\n  console.log(\"Yay!\");\n}\ncheer;",
+      "why": "Writing cheer names the function. Adding () runs it.",
+      "correct": "function cheer() {\n  console.log(\"Yay!\");\n}\ncheer();"
+    },
+    "challenge": {
+      "prompt": "Call the celebrate function.",
+      "starter": "function celebrate() {\n  console.log(\"Great job!\");\n}\n\n___();",
+      "answer": "celebrate",
+      "hint": "Type the function name before the parentheses."
+    },
+    "quiz": {
+      "question": "What does cheer() do?",
+      "options": ["Runs the cheer function", "Deletes the function", "Creates a number"],
+      "answer": 0
+    }
+  }
+]
