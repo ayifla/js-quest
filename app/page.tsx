@@ -72,7 +72,21 @@ export default function LandingPage() {
           ))}
         </div>
       </section>
-      <footer className="border-t bg-white"><div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-5 py-8 text-sm text-slate-500 sm:flex-row lg:px-8"><span className="font-bold text-ink">JS Quest</span><span className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-mint" /> Your progress stays private on this device.</span></div></footer>
+      <footer className="border-t bg-white">
+  <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-5 py-8 text-sm text-slate-500 sm:flex-row lg:px-8">
+    <div>
+      <p className="font-bold text-ink">
+        JS Quest™
+      </p>
+      <p>© 2026 Ayifla. All rights reserved.</p>
+    </div>
+
+    <span className="flex items-center gap-2">
+      <ShieldCheck className="h-4 w-4 text-mint" />
+      Your progress stays private on this device.
+    </span>
+  </div>
+</footer>
     </main>
   );
 }
